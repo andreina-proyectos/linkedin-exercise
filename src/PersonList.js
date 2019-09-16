@@ -11,7 +11,7 @@ class PersonList extends React.Component {
       <ul className="person-list">
        { this.props.peopleDataProp.map((person)=>{
          return(
-          <Person 
+          <Person
             name={person.name.first}
             lastName={person.name.last}
             img={person.picture.thumbnail}
