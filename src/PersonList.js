@@ -1,4 +1,5 @@
 import React from 'react';
+import Person from './Person';
 
 class PersonList extends React.Component {
   constructor(props){
@@ -10,12 +11,14 @@ class PersonList extends React.Component {
       <ul className="person-list">
        { this.props.peopleDataProp.map((person)=>{
          return(
-          <li className="person-list__item">
-            <h1 className="name">{person.name.first} {person.name.last}</h1>
-            <img src={person.picture.thumbnail} alt="" className="photo"/>
-            <p className="city">{person.location.city}</p>
-            <p className="age">{person.dob.age}</p>
-          </li>
+          <Person 
+            name={person.name.first}
+            lastName={person.name.last}
+            img={person.picture.thumbnail}
+            city={person.location.city}
+            age={person.dob.age}
+          
+          />
          )
         }
         )
